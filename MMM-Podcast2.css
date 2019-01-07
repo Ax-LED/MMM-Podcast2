@@ -1,0 +1,57 @@
+.float {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: normal;
+	color: #fff;
+	float: left;
+}
+
+.MMM-Dreambox {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: normal;
+	color: #fff;
+	clear: both;
+}
+
+.db {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: normal;
+	color: #fff;
+	clear: both;
+}
+
+div.selected {
+	background: grey;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: normal;
+	color: #fff;
+	clear: both;
+}
+
+.inactive {
+	color: grey;
+	font-style: italic;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: normal;
+	clear: both;
+}
+
+.play:before {
+	content: "\f04b";
+	margin-left: 5px;
+	margin-right: 5px;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
