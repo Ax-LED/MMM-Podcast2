@@ -26,12 +26,12 @@ Module.register('MMM-Podcast2', {
 		return ['MMM-Podcast2.css'];
 	},
 
-	getTranslations: function() {
+	/*getTranslations: function() {
 		return {
-			de: "translations/de.json",
-			en: "translations/en.json",
+			//de: "translations/de.json",
+			//en: "translations/en.json",
 		};
-	},
+	},*/
 
 	start: function() {
 		Log.info('Starting module: ' + this.name);
