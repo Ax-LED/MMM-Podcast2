@@ -1,4 +1,4 @@
-//'use strict';
+/*'use strict';*/
 
 /* Magic Mirror
  * Module: MMM-Dreambox
@@ -60,6 +60,7 @@ module.exports = NodeHelper.create({
 				} else {
 					Errormessage = 'Error: '+error.code+' in '+myUrl;
 				}
+				console.log('MMM-Podcast2 Error :',Errormessage); 
 				self.sendSocketNotification("DATA",['ERROR',Errormessage]);
 			}
 		});
