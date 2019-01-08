@@ -32,10 +32,10 @@ module.exports = NodeHelper.create({
 
 		if (notification === "BUTTON_PRESSED") {
 			if (payload[1] === 'PLAY') {
-				console.log('Axled node_helper PLAY:'); 
+				console.log('MMM-Podcast2 PLAY:'); 
 				exec('omxplayer '+self.config.omxargs+payload[0], null);//without --live buffering works
 			} else {
-				console.log('Axled node_helper STOP:'); 
+				console.log('MMM-Podcast2 STOP:'); 
 				exec('pkill omxplayer', null);
 			}
 			self.getData2();
