@@ -19,7 +19,7 @@ Module.register('MMM-Podcast2', {
 	
 	// Define required scripts.
 	getScripts: function() {
-		return ["moment.js", 'xml2json.js', "font-awesome.css"];
+		return ["moment.js", 'MMM-Podcast-xml2json.js', "font-awesome.css"];
 	},
 	
 	getStyles: function() {
