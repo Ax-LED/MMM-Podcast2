@@ -11,7 +11,7 @@ const NodeHelper = require('node_helper');
 const request = require('request');
 const exec = require("child_process").exec;
 
-//var Errormessage = '';
+var Errormessage = '';
 
 module.exports = NodeHelper.create({
 
@@ -41,9 +41,9 @@ module.exports = NodeHelper.create({
 			self.getData2();
 		}
 
-		/*if (notification === "FETCH_DATA") {
+		if (notification === "FETCH_DATA") {
 			self.getData2();
-		}*/
+		}
 	},
 
 	getData2: function() {
