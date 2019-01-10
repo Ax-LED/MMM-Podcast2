@@ -45,7 +45,7 @@ The following properties can be configured:
 		</tr>
 			<tr>
 			<td><code>refreshInterval</code></td>
-			<td>refreshs streaming link <code>default: 1000 * 1800, //refreshs streaming link every 1800 seconds (30Min)</code>.</td>
+			<td>refreshs streaming link <code>default: 1000 * 1800</code> Refreshs streaming link every 1800 seconds (30Min).</td>
 		</tr>
 		<tr>
 			<td><code>omxargs</code></td>
