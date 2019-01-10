@@ -21,6 +21,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 	module: 'MMM-Podcast2',
 	config: {
 		feedUrl: 'https://www.tagesschau.de/export/video-podcast/webxl/tagesschau-in-100-sekunden_https/',
+		refreshInterval: 1000 * 1800, //refreshs streaming link every 1800 seconds (30Min)
 		omxargs: ' --win 320,180,1600,900  -o both '
 		}
 },
@@ -41,6 +42,10 @@ The following properties can be configured:
 		<tr>
 			<td><code>feedUrl</code></td>
 			<td>URL of the feed, <code>default: 'https://www.tagesschau.de/export/video-podcast/webxl/tagesschau-in-100-sekunden_https/'</code>.</td>
+		</tr>
+			<tr>
+			<td><code>refreshInterval</code></td>
+			<td>refreshs streaming link <code>default: 1000 * 1800, //refreshs streaming link every 1800 seconds (30Min)</code>.</td>
 		</tr>
 		<tr>
 			<td><code>omxargs</code></td>
