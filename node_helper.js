@@ -10,6 +10,7 @@
 const NodeHelper = require('node_helper');
 const request = require('request');
 const exec = require("child_process").exec;
+const parser = require("./MMM-Podcast-xml2json.js");
 
 var Errormessage = '';
 
@@ -53,7 +54,8 @@ module.exports = NodeHelper.create({
 		request({url: myUrl }, function (error, response, body) {
 		
 			if (!error && response.statusCode == 200) {
-				self.sendSocketNotification("DATA",body);
+				json = parser.xml2json(body);
+				self.sendSocketNotification("DATA",json);
 			} else {
 				if (!error && response.statusCode == 404){//because sometimes error is null
 					Errormessage = 'Error: '+response.statusCode+' in '+myUrl;

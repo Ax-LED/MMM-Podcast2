@@ -15,12 +15,13 @@ Module.register('MMM-Podcast2', {
 	defaults: {
 		refreshInterval: 1000 * 1800, //refresh every 1800 seconds (30Min)
 		feedUrl: 'https://www.tagesschau.de/export/video-podcast/webxl/tagesschau-in-100-sekunden_https/',
-		omxargs: ' --win 320,180,1600,900  -o both '
+		omxargs: ' --win 320,180,1600,900 -o both '
 	},
 	
 	// Define required scripts.
 	getScripts: function() {
-		return ["moment.js", 'MMM-Podcast-xml2json.js', "font-awesome.css"];
+		//return ["moment.js", 'MMM-Podcast-xml2json.js', "font-awesome.css"];
+		return ["moment.js", "font-awesome.css"];
 	},
 	
 	getStyles: function() {
@@ -42,25 +43,7 @@ Module.register('MMM-Podcast2', {
 	},
 
 	getDom: function() {
-		/*var self = this;
-
-		// create element wrapper for show into the module
-		var wrapper = document.createElement("div");
-
-		//Errorhandling
-		var Errorinfo = document.createElement("div");
-		Errorinfo.setAttribute('class', 'float');
-		Errorinfo.setAttribute('id','error1');
-		Errorinfo.setAttribute('style','display: none;');
-		Errorinfo.innerHTML = '';
-		var Separator = document.createElement("hr");
-		Separator.setAttribute('class', 'db');
-		Separator.setAttribute('id','error2');
-		Separator.setAttribute('style','display: none;');
-		wrapper.appendChild(Errorinfo);
-		wrapper.appendChild(Separator);
 		
-		return wrapper;*/
 	},
 
 	
@@ -85,7 +68,8 @@ Module.register('MMM-Podcast2', {
 				//console.log('Axled STARTED Received:'); 
 			} else if (notification === "DATA") {
 				this.loaded = true;
-				var json=xml2json(payload);
+				//var json=xml2json(payload);
+				var json = payload;
 				streamurl = json.rss.channel.item.enclosure.url;
 				//console.log('Axled json:', json); 
 				//console.log('Axled json enclosure:',json.rss.channel.item.enclosure.url);
@@ -100,8 +84,8 @@ Module.register('MMM-Podcast2', {
 		//console.log('Axled IntervalID2:',IntervalID2); 
 		if (IntervalID2 === ''){
 			// ... and then repeat in the given interval
-			IntervalID = setInterval(() => {
-			this.sendSocketNotification("FETCH_DATA", '');
+			IntervalID2 = setInterval(() => {
+			this.sendSocketNotification("FETCH_DATA", '')
 			//console.log('Axled MMM-Podcast2 refresh: ',moment().format('LTS')); 
 			}, interval); 
 		}
